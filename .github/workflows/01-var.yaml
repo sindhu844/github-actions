@@ -1,0 +1,16 @@
+name: scope-of-variable
+
+on:
+  push:
+    branches:
+      - main
+    
+jobs:
+  name-of-job-var01:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: print name
+        run: echo sindhu
+
+
