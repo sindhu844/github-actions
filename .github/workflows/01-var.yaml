@@ -17,7 +17,7 @@ jobs:
         # env:
         #   name: vijay
         run: |
-          echo myName = SindhuV >> $GITHUB_ENV
+          echo "myName = SindhuV" >> $GITHUB_ENV
           echo my name is ${myName}
   name-of-job-var02:
     runs-on: windows-latest
