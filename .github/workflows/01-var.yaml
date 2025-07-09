@@ -9,13 +9,15 @@ jobs:
   name-of-job-var01:
     runs-on: ubuntu-latest
     
-    env:
-      name1: sindhu >> $GITHUB_ENV
+    # env:
+    #   name1: sindhu >> $GITHUB_ENV
     steps:
     
       - name: print name
         # env:
         #   name: vijay
-        run: echo my name is ${name1} 
+        run: |
+          echo myName = SindhuV >> $GITHUB_ENV
+          echo my name is ${name1} 
 
 
