@@ -23,6 +23,5 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: printing name from job 1
-        run: printing name from job 1 the name is ${myName}
-
+        run: echo printing name from job 1 the name is ${myName}
 
