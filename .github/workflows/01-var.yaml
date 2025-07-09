@@ -10,12 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     
     env:
-      name: sindhu
+      name1: sindhu >> $GITHUB_ENV
     steps:
     
       - name: print name
-        env:
-          name: vijay
-        run: echo my name is ${name} 
+        # env:
+        #   name: vijay
+        run: echo my name is ${name1} 
 
 
