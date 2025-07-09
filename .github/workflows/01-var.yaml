@@ -13,10 +13,11 @@ jobs:
       - name: print name
         run: |
           echo "myName = SindhuV" >> $GITHUB_ENV
+          echo "my name in step1 is ${myName}"
 
       - name: set name
         run: |
-          echo "my name is $myName"
+          echo "my name in step2 is ${myName}"
 
 
   name-of-job-var02:
@@ -24,5 +25,5 @@ jobs:
     needs: name-of-job-var01
     steps:
       - name: printing name from job 1
-        run: echo printing name from job 1 the name is $myName
+        run: echo "printing name from job 1 the name is $myName"
 
