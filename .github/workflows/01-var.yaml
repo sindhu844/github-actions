@@ -16,7 +16,7 @@ jobs:
 
       - name: set name
         run: |
-          echo my name is ${myName}
+          echo my name is $myName
 
 
   name-of-job-var02:
