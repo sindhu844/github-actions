@@ -8,11 +8,15 @@ on:
 jobs:
   name-of-job-var01:
     runs-on: ubuntu-latest
+
+    outputs:
+      passed-name: ${{steps.set-name.outputs.myName}}
     steps:
     
       - name: print name
+        id: set-name
         run: |
-          echo "myName=SindhuV" >> $GITHUB_ENV
+          echo "myName=SindhuV" >> $GITHUB_OUTPUT
           echo "my name in step1 is ${myName}"
 
       - name: set name
@@ -20,10 +24,10 @@ jobs:
           echo "my name in step2 is ${myName}"
 
 
-  # name-of-job-var02:
-  #   runs-on: windows-latest
-  #   needs: name-of-job-var01
-  #   steps:
-  #     - name: printing name from job 1
-  #       run: echo "printing name from job 1 the name is $myName"
+  name-of-job-var02:
+    runs-on: windows-latest
+    needs: name-of-job-var01
+    steps:
+      - name: printing name from job 1
+        run: echo "printing name from job 1 the name is ${{needs.name-of-job-var01.outputs.passed-name}}"
 
