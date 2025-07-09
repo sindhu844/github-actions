@@ -18,6 +18,11 @@ jobs:
         #   name: vijay
         run: |
           echo myName = SindhuV >> $GITHUB_ENV
-          echo my name is ${name1} 
+          echo my name is ${myName}
+  name-of-job-var02:
+    runs-on: windows-latest
+    steps:
+      - name: printing name from job 1
+        run: printing name from job 1 the name is ${myName}
 
 
