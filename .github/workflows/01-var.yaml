@@ -12,7 +12,10 @@ jobs:
     env:
       name: sindhu
     steps:
+    
       - name: print name
-        run: echo ${name} 
+        env:
+          name: vijay
+        run: echo my name is ${name} 
 
 
