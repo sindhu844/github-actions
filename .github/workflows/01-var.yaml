@@ -8,17 +8,17 @@ on:
 jobs:
   name-of-job-var01:
     runs-on: ubuntu-latest
-    
-    # env:
-    #   name1: sindhu >> $GITHUB_ENV
     steps:
     
       - name: print name
-        # env:
-        #   name: vijay
         run: |
           echo "myName = SindhuV" >> $GITHUB_ENV
+
+      - name: set name
+        run: |
           echo my name is ${myName}
+
+
   name-of-job-var02:
     runs-on: windows-latest
     needs: name-of-job-var01
