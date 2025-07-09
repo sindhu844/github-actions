@@ -9,8 +9,10 @@ jobs:
   name-of-job-var01:
     runs-on: ubuntu-latest
     
+    env:
+      name: sindhu
     steps:
       - name: print name
-        run: echo sindhu 
+        run: echo ${name} 
 
 
